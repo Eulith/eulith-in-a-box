@@ -11,6 +11,10 @@ When you run `eulith-devrpc`, you get:
 🚨🚨 NOTE: Using this service WILL NOT consume any real ETH or GoerliETH. 
 That's the whole point of having a dev binary like this. 🚨🚨
 
+# Dependency
+You must have docker installed and running to use this tool.
+
+You can find out how to install docker here: https://docs.docker.com/get-docker/
 # Run
 `./start.sh`
 
@@ -36,11 +40,8 @@ When you run the image, you'll need to wait until you see `Starting server on po
 It may take a few seconds for everything to spin up.
 
 # Shutdown
-If you ran the docker image with the `-it` as suggested, you can just
-`Crtl-C` the process.
-
-Otherwise, you'll have to run `docker container ls`,
-find the container ID, and kill with `docker container stop <CONTAINER_ID>`
+1. Run `docker container ls`
+2. Find the container ID, and kill with `docker container stop <CONTAINER_ID>`
 
 🚨🚨 NOTE: This service DOES NOT preserve state. If you 
 shut down the process and restart, YOUR LOCAL ACTIONS WILL 
