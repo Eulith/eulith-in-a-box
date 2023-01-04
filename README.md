@@ -22,6 +22,14 @@ If you would like to force an update of the docker image, run `./start.sh -r`
 
 If you need help, run `./start.sh -h` or get in touch with us
 
+### Credentials
+The built-in Eulith user can be authenticated with:
+
+Username: `libtest`
+Password: `test`
+
+The private key for the pre-funded wallet is `0x4d5db4107d237df6a3d58ee5f70ae63d73d7658d4026f2eefd2f204c81682cb7`
+
 ### Forking (ETH Mainnet & Goerli)
 You can trivially (at least we think so) fork Mainnet and Goerli.
 

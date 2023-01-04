@@ -68,4 +68,4 @@ fi
 echo "Started Eulith DEV-RPC server on http://localhost:7777"
 echo "Username: libtest"
 echo "Password: test"
-echo "Fork arguments (-c=chain, -b=block) $FORK_ARGS"
+echo "Wallet private key: 0x4d5db4107d237df6a3d58ee5f70ae63d73d7658d4026f2eefd2f204c81682cb7"
