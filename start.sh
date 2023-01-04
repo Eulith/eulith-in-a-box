@@ -1,4 +1,4 @@
-TARFILE="$(find . -type f -iname "eulith-devrpc_*.tar")"
+TARFILE="$(find . -type f -iname "eulith-devrpc_*.tar.gz")"
 RELOAD="f"
 FORK_CHAIN_ID="0"
 FORK_BLOCK_ID="0"
