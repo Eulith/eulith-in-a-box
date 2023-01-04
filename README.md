@@ -44,9 +44,6 @@ Examples:
 
 `./start.sh -c 5 -b 16327616` fork Goerli, block number 16327616
 
-When you run the image, you'll need to wait until you see `Starting server on port: 7777`.
-It may take a few seconds for everything to spin up.
-
 # Shutdown
 1. Run `docker container ls`
 2. Find the container ID, and kill with `docker container stop <CONTAINER_ID>`
