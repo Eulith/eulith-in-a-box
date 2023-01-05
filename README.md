@@ -12,9 +12,11 @@ When you run `eulith-devrpc`, you get:
 That's the whole point of having a dev binary like this. 🚨🚨
 
 # Dependency
+### Docker
 You must have docker installed and running to use this tool.
 
 You can find out how to install docker here: https://docs.docker.com/get-docker/
+
 # Run
 `./start.sh`
 

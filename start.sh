@@ -1,8 +1,8 @@
-TARFILE="$(find . -type f -iname "eulith-devrpc_*.tar.gz")"
 RELOAD="f"
 FORK_CHAIN_ID="0"
 FORK_BLOCK_ID="0"
 FORK_ARGS=""
+DOCKER_IMAGE_NAME=keulith/devrpc:latest
 
 function print_usage() {
     echo "Use this script to start Eulith DEV-RPC services. Example: ./start.sh"
@@ -24,8 +24,8 @@ done
 docker image inspect eulith-devrpc > /dev/null 2>&1
 if [[ $? != 0  || $RELOAD == "t" ]]
 then
-  echo "Loading Docker image from $TARFILE... this may take a few moments"
-  docker load < $TARFILE
+  echo "Pulling Docker image... this may take a few moments"
+  docker pull $DOCKER_IMAGE_NAME
   if [[ $? != 0 ]]
   then
     echo "Failed to load image"
@@ -52,9 +52,9 @@ fi
 
 if [[ $FORK_ARGS != "" ]]
 then
-  docker run -p 7777:7777 eulith-devrpc $FORK_ARGS > /dev/null 2>&1&
+  docker run -p 7777:7777 $DOCKER_IMAGE_NAME $FORK_ARGS > /dev/null 2>&1&
 else
-  docker run -p 7777:7777 eulith-devrpc > /dev/null 2>&1&
+  docker run -p 7777:7777 $DOCKER_IMAGE_NAME > /dev/null 2>&1&
 fi
 
 echo "Starting server, please wait ..."
