@@ -65,7 +65,9 @@ then
   echo "Server start failed"
 fi
 
-echo "Started Eulith DEV-RPC server on http://localhost:7777"
+echo "Started Eulith DEVRPC server on http://localhost:7777/v0"
+echo "You can view http://localhost:7777/v0/status in your browser to ensure the Anvil provider started correctly"
 echo "Username: libtest"
 echo "Password: test"
 echo "Wallet private key: 0x4d5db4107d237df6a3d58ee5f70ae63d73d7658d4026f2eefd2f204c81682cb7"
+echo "Stop this service with \`docker container ls\`, then \`docker container stop <CONTAINER_ID>\`"

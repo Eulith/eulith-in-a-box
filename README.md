@@ -44,7 +44,15 @@ Examples:
 
 `./start.sh -c 1 -b 16327616` fork Mainnet, block number 16327616
 
-`./start.sh -c 5 -b 16327616` fork Goerli, block number 16327616
+`./start.sh -c 5 -b 90000` fork Goerli, block number 90000
+
+### Troubleshooting
+If the server fails to start, try removing any fork functionality. The fork
+takes longer to boot up and will fail silently if you give it an invalid
+block ID.
+
+If it still fails with no forking, please get in touch and let us know what the
+problem is. Thanks!
 
 # Shutdown
 1. Run `docker container ls`
